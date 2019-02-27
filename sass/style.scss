@@ -1,4 +1,8 @@
 
+$main-red: #df0a0a;
+$main-dark: #19100b;
+$main-white: #fcfcfc;
+
 body {
     background-image: url("https://t3.ftcdn.net/jpg/01/33/24/46/240_F_133244694_ALo0XI2YOFy3YP70sd5cPAsQv6Ewy8uz.jpg");
     background-size: cover;
@@ -39,17 +43,17 @@ body {
 .nav {
     display: flex;
     justify-content: center;
-    background: #19100b;
+    background: $main-dark;
     padding: 0;
 }
 .nav-pills>li>a {
     border-radius: 0;
 }
-.nav>li>a:hover {
-    background: #df0a0a;
-}
 .nav>li>a {
     padding: 20px;
+    &:hover {
+        background: $main-red;
+    }
 }
 .fa-nav {
     font-size: 20px;
@@ -60,7 +64,7 @@ body {
 .menu-icon {
     text-align: center;
     font-size: 14px;
-    color: #fff;
+    color: $main-white;
 }
                 /*MENU*/
 .main-menu {
@@ -76,24 +80,25 @@ body {
     margin-left: 10%;
 }
 .btn-danger {
-    background: #df0a0a;
-    border-color: #df0a0a;
+    background: $main-red;
+    border-color: $main-red;
 }
 .btn-info {
-    background: #fff;
-    border-color: #fff;
-    color: #df0a0a; 
+    background: $main-white;
+    border-color: $main-white;
+    color: $main-red;
+    &:hover {
+        background: $main-red;
+        border-color: $main-red;
+        color: $main-white; 
+    } 
 }
-.btn-info:hover {
-    background: #df0a0a;
-    border-color: #df0a0a;
-    color: #fff; 
-}
+
 .pizza-size {
     position: absolute;
     text-align: center;
-    color: #fff;
-    background: #19100b;
+    color: $main-white;
+    background: $main-dark;
 }
 .size-price {
     display: flex;
@@ -105,13 +110,13 @@ body {
     position: fixed;
     top: 0;
     justify-content: center;
-    background: #19100b;
+    background: $main-dark;
     padding: 0;
     margin: 0;
 }
 .total-price {
     display: flex;
-    background: #e3e7ed;
+    background: $main-white;
 }
 .amount {
     font-size: 25px;
@@ -123,7 +128,7 @@ body {
 
                 /*FOOTER*/
 .footer {
-    background: #19100b;
-    color: #fff;
+    background: $main-dark;
+    color: $main-white;
     margin-top: 5%;
 }
