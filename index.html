@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="#menu">
                         <div class="menu-icon"><i class="fa fa-nav fa-pizza-slice"> <br>Menu</i></div>
                     </a>
                 </li>
@@ -65,50 +65,88 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="#contact">
                         <div class="menu-icon"><i class="fa fa-nav fa-feather"><br>Contact</i></div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="https://www.facebook.com/" target="blank">
                         <div class="menu-icon"><i class="fab fa-nav fa-facebook-f"><br>Fanpage</i></div>
                     </a>
             </ul>
         </nav>
     </div>
-                    <!-- CART -->
-    <div class="col-md-12 col-xl-12 mobile-cart">
-        <a href="#"><button class="btn btn-success btn-lg">Cart</button></a>
+    <!-- CART -->
+    <div class="col-md-12 col-xl-12 mobile-cart">   
+        <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#cartModal">Cart</button>
         <div class="total-price">
             <i class="fa fa-shopping-cart fa-2x"></i>
             <span class="amount">0.00 zł</span>
         </div>
-        <a href="#"><button class="btn btn-danger btn-lg">Buy!</button></a>
+        <a href="#">
+            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#buyModal">Buy!</button>
+        </a>
     </div>
-                        <!--MENU-->
-    <div class="container main-menu">
-        <div class="row pizza-type">
+    <!--CART MODAL-->
+    <div id="cartModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Your Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Margherita 35cm </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BUY MODAL -->
+    <div id="buyModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Payment method</h4>
+                </div>
+                <div class="modal-body">
+                        <p>Margherita 35cm </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Go back</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Pay</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--MENU-->
+    <div class="main-menu" id="menu">
+        <div class="row pizza-type" id="test">
             <div class="col-md-10">
                 <div class="row main-row">
                     <div class="col-sm-5">
-                        <h3>Margherita</h3>
-                        <p>ser</p>
+                        <h3 class="pizza pizzaName" id="position-1">Margherita</h3>
+                        <p class="pizza ingredientsList">ser</p>
                     </div>
                     <div class="col-sm-7 size-price">
-                        <a href="#"><button class="btn btn-info btn-lg">17,00 zł</button>
-                            <div class="pizza-size">25 cm</div>
+                        <a href="#"><button class="btn btn-info btn-lg pizza s-price">17,00 zł</button>
+                            <div class=" pizza pizza-size pizza-size-s">25 cm</div>
                         </a>
-                        <a href="#"><button class="btn btn-info btn-lg">28,00 zł</button>
-                            <div class="pizza-size">25 cm</div>
+                        <a href="#"><button class="btn btn-info btn-lg m-price">28,00 zł</button>
+                            <div class=" pizza pizza-size pizza-size-m">35 cm</div>
                         </a>
-                        <a href="#"><button class="btn btn-info btn-lg">36,00 zł</button>
-                            <div class="pizza-size">25 cm</div>
+                        <a href="#"><button class="btn btn-info btn-lg l-price">36,00 zł</button>
+                            <div class=" pizza pizza-size pizza-size-l">45 cm</div>
                         </a>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
-        <div class="row pizza-type">
+        <!-- <div class="row pizza-type">
             <div class="col-md-10">
                 <div class="row main-row">
                     <div class="col-sm-5">
@@ -151,47 +189,47 @@
             </div>
         </div>
         <div class="row pizza-type">
-                <div class="col-md-10">
-                    <div class="row main-row">
-                        <div class="col-sm-5">
-                            <h3>Margherita</h3>
-                            <p>ser</p>
-                        </div>
-                        <div class="col-sm-7 size-price">
-                            <a href="#"><button class="btn btn-info btn-lg">17,00 zł</button>
-                                <div class="pizza-size">25 cm</div>
-                            </a>
-                            <a href="#"><button class="btn btn-info btn-lg">28,00 zł</button>
-                                <div class="pizza-size">25 cm</div>
-                            </a>
-                            <a href="#"><button class="btn btn-info btn-lg">36,00 zł</button>
-                                <div class="pizza-size">25 cm</div>
-                            </a>
-                        </div>
+            <div class="col-md-10">
+                <div class="row main-row">
+                    <div class="col-sm-5">
+                        <h3>Margherita</h3>
+                        <p>ser</p>
+                    </div>
+                    <div class="col-sm-7 size-price">
+                        <a href="#"><button class="btn btn-info btn-lg">17,00 zł</button>
+                            <div class="pizza-size">25 cm</div>
+                        </a>
+                        <a href="#"><button class="btn btn-info btn-lg">28,00 zł</button>
+                            <div class="pizza-size">25 cm</div>
+                        </a>
+                        <a href="#"><button class="btn btn-info btn-lg">36,00 zł</button>
+                            <div class="pizza-size">25 cm</div>
+                        </a>
                     </div>
                 </div>
+            </div>
         </div>
         <div class="row pizza-type">
-                <div class="col-md-10">
-                    <div class="row main-row">
-                        <div class="col-sm-5">
-                            <h3>Margherita</h3>
-                            <p>ser</p>
-                        </div>
-                        <div class="col-sm-7 size-price">
-                            <a href="#"><button class="btn btn-info btn-lg">17,00 zł</button>
-                                <div class="pizza-size">25 cm</div>
-                            </a>
-                            <a href="#"><button class="btn btn-info btn-lg">28,00 zł</button>
-                                <div class="pizza-size">25 cm</div>
-                            </a>
-                            <a href="#"><button class="btn btn-info btn-lg">36,00 zł</button>
-                                <div class="pizza-size">25 cm</div>
-                            </a>
-                        </div>
+            <div class="col-md-10">
+                <div class="row main-row">
+                    <div class="col-sm-5">
+                        <h3>Margherita</h3>
+                        <p>ser</p>
+                    </div>
+                    <div class="col-sm-7 size-price">
+                        <a href="#"><button class="btn btn-info btn-lg">17,00 zł</button>
+                            <div class="pizza-size">25 cm</div>
+                        </a>
+                        <a href="#"><button class="btn btn-info btn-lg">28,00 zł</button>
+                            <div class="pizza-size">25 cm</div>
+                        </a>
+                        <a href="#"><button class="btn btn-info btn-lg">36,00 zł</button>
+                            <div class="pizza-size">25 cm</div>
+                        </a>
                     </div>
                 </div>
-        </div>
+            </div>
+        </div> -->
     </div>
     <!--FOOTER-->
     <div class="container footer">
@@ -209,7 +247,7 @@
                 </p>
             </div>
             <div class="col-md-8">
-                <div class="right-footer">
+                <div class="right-footer" id="contact">
                     <p class="last-order">Ostatnie zamówienia przyjmujemy do 20 min przed godziną zamknięcia. <br>
                         Kuchnia jest otwarta do godz. 23:00 Informacja na temat alergenów dostępna w lokalach.
                     </p>
@@ -232,7 +270,13 @@
             </div>
         </div>
     </div>
+
+    <!-- <p id="test">
+
+    </p> -->
+
     <!--SCRIPT        -->
+    <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
