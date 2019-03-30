@@ -1,55 +1,84 @@
 var menu = [ 
-position = {
+    {
     name: 'Margherita',
     ingredients: [' ser', ' pomidor'], 
         s: {
-            price: 17,
+            price: '17,00',
             size: 25
         },
         m: {
-            price: 24,
+            price: '24,50',
             size: 35
         },
         l: {
-            price: 31,
+            price: '31,80',
             size: 45
         },                     
-},
-position = {
+    },
+    {
     name: 'Funghi',
     ingredients: [' ser', ' pomidor', ' pieczarki'], 
         s: {
-            price: 17,
+            price: '18,20',
             size: 25
         },
         m: {
-            price: 24,
+            price: '26,00',
             size: 35
         },
         l: {
-            price: 31,
+            price: '32,60',
             size: 45
         },                         
-},
+    },
+    {
+        name: 'Salami',
+        ingredients: [' ser', ' pomidor', ' salami'], 
+            s: {
+                price: '19,20',
+                size: 25
+            },
+            m: {
+                price: '27,70',
+                size: 35
+            },
+            l: {
+                price: '35,30',
+                size: 45
+            },                         
+        },
 ];
 
-var menuElement = position.name + position.ingredients + position.s.price + position.s.size + position.m.price + position.m.size + position.l.price + position.l.size;
-
-
-function menuListcreator () {
-    for (var i=0; i<menu.length; i++) {     
-    }
-    return ; 
+function getTemplateForPizzaData(data) {
+    return `
+            <div class="col-sm-5">
+                <h3 class="pizzaName" id="${data.name}">${data.name}</h3>
+                <p class="ingredientsList">${data.ingredients.join(', ')}</p>
+            </div>
+            <div class="col-sm-7 size-price">
+                <a href="#"><button class="btn btn-info btn-lg s-price">${data.s.price} zł</button>
+                    <div class="pizza-size pizza-size-s">${data.s.size} cm</div>
+                </a>
+                <a href="#"><button class="btn btn-info btn-lg m-price">${data.m.price} zł</button>
+                    <div class="pizza-size pizza-size-m">${data.m.size} cm</div>
+                </a>
+                <a href="#"><button class="btn btn-info btn-lg l-price">${data.l.price} zł</button>
+                    <div class="pizza-size pizza-size-l">${data.l.size} cm</div>
+                </a>
+            </div>
+    `;
 }
-// console.log(menuElement);
 
-document.getElementsByClassName("pizza").innerHTML = menuElement;
+function renderPizzaMenu () {
+    var pizzaMenuContainer = document.getElementById('pizza-menu');
 
+    for (var i = 0; i < menu.length; i++) {
+        const rowElement = document.createElement('div');
+        rowElement.classList.add('row', 'main-row');
+        rowElement.innerHTML = getTemplateForPizzaData(menu[i]);
+        pizzaMenuContainer.appendChild(rowElement);
+    }
+}
+renderPizzaMenu();
  
-        // document.querrySelector("Ma").innerHTML = name.examplePosition ()          
-// function myFunction () {
-//     var menuPosition = document.getElementById("position-1").document.querySelectorAll("pizza");
-// }
-
-
-// document.getElementById("pizzaName").innerHTML = menu.examplePosition ();
+ 
