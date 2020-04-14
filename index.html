@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!--CAROUSEL-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="https://images.pexels.com/photos/1596888/pexels-photo-1596888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800"
+                    alt="Los Angeles" class="img-fluid">
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/1093015/pexels-photo-1093015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800"
+                    alt="Chicago" class="img-fluid">
+            </div>
+
+            <div class="item">
+                <img src="https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=940"
+                    alt="New York" class="img-fluid">
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--MAIN NAV-->
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hi I'm a tooltip">
+                        <div class="menu-icon"><i class="fa fa-nav fa-home"> <br>Home</i></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" data-toggle="tooltip" data-placement="bottom" title="Hi I'm a tooltip">
+                        <div class="menu-icon"><i class="fa fa-nav fa-pizza-slice"> <br>Menu</i></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hi I'm a tooltip">
+                        <div class="menu-icon"><i class="fa fa-nav fa-dollar-sign"><br>Promotion</i></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" data-toggle="tooltip" data-placement="bottom" title="Hi I'm a tooltip">
+                        <div class="menu-icon"><i class="fa fa-nav fa-feather"><br>Contact</i></div>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Hi I'm a tooltip">
+                    <a href="https://www.facebook.com/" target="blank">
+                        <div class="menu-icon"><i class="fab fa-nav fa-facebook-f"><br>Fanpage</i></div>
+                    </a>
+            </ul>
+        </nav>
+    </div>
+    <!-- CART -->
+    <div class="col-md-12 col-xl-12 mobile-cart">
+        <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#cartModal">Cart</button>
+        <div class="total-price">
+            <i class="fa fa-shopping-cart fa-2x"></i>
+            <span class="amount">0.00 zł</span>
+        </div>
+        <a href="#">
+            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#buyModal">Buy!</button>
+        </a>
+    </div>
+    <!--CART MODAL-->
+    <div id="cartModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Your Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Margherita 35 cm</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BUY MODAL -->
+    <div id="buyModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Choose your payment method</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Visa</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Go back</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MENU-->
+    <div class="main-menu" id="menu">
+        <div class="row pizza-type">
+            <div class="col-md-10" id="pizza-menu">
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <div class="container footer">
+        <div class="row">
+            <div class="col-md-4">
+                <p>
+                    Copyright © 2019 Pizza New. <br>
+                    Realizacja Pokrywka Artur <br>
+                    All rights reserved. <br>
+                </p>
+                <p>
+                    Kontakt | Regulamin | Nasze lokale | Artykuły o pizzy | <br>
+                    Obszar dostawy | Formy płatności | Rozmiary pizzy | <br>
+                    Pizza w święta | Opinie o nas | FAQ
+                </p>
+            </div>
+            <div class="col-md-8">
+                <div class="right-footer" id="contact">
+                    <p class="last-order">Ostatnie zamówienia przyjmujemy do 20 min przed godziną zamknięcia. <br>
+                        Kuchnia jest otwarta do godz. 23:00 Informacja na temat alergenów dostępna w lokalach.
+                    </p>
+                    <div class="col-md-6">
+                        Kraków, Chopina 33 <br>
+                        Pn-czw: 10 - 23 <br>
+                        Pt-sob: 10 - 24 <br>
+                        Nd: 11-23 <br>
+                        (12) 630 99 99 <br>
+                        510 466 790 <br>
+                    </div>
+                    <div class="col-md-6">
+                        Kraków, Brodzińskiego 6 <br>
+                        Pn-czw: 10:30 - 23 <br>
+                        Pt-sob: 10:30 - 24 <br>
+                        Nd: 10:30-23 <br>
+                        505 771 807 <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SCRIPT        -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>
